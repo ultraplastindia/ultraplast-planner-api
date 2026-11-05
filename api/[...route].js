@@ -6,7 +6,7 @@ function getApp() {
   if (app) return app;
   if (!process.env.DATABASE_URL) return null;
   var neon = require('@neondatabase/serverless').neon, sql = neon(process.env.DATABASE_URL);
-  var store = createStore(function (text, params) { return sql.query(text, params || []); });
+  var store = createStore(function (text, params) { return typeof sql.query === 'function' ? sql.query(text, params || []) : sql(text, params || []); });
   app = createApp({ store: store, env: process.env, resolveMx: function (d) { return dns.resolveMx(d); } });
   return app;
 }
