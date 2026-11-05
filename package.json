@@ -1,0 +1,10 @@
+{
+  "name": "ultraplast-planner-backend",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Registration, OTP, approval and admin settings API for the Ultraplast Conveyor Planner (Vercel serverless + Neon Postgres)",
+  "engines": { "node": ">=18" },
+  "scripts": { "test": "node test/backend.test.js" },
+  "dependencies": { "@neondatabase/serverless": "^0.10.4", "nodemailer": "^6.9.16" },
+  "devDependencies": { "pg-mem": "^3.0.5" }
+}
