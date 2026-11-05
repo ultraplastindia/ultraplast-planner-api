@@ -2,3 +2,8 @@
   "functions": { "api/index.js": { "maxDuration": 30 } },
   "rewrites": [ { "source": "/api/(.*)", "destination": "/api" } ]
 }
+
+{
+  "cleanUrls": true,
+  "trailingSlash": false
+}
